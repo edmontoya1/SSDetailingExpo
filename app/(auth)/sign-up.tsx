@@ -45,7 +45,7 @@ export default function SignUpScreen() {
 
       if (completeSignUp.status === "complete") {
         await setActive({ session: completeSignUp.createdSessionId });
-        router.replace("/");
+        router.replace("/(tabs)/");
       } else {
         console.error(JSON.stringify(completeSignUp, null, 2));
       }
