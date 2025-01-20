@@ -37,4 +37,5 @@ yarn-error.*
 
 app-example
 
-.env.local
+# Sentry
+ios/sentry.properties
