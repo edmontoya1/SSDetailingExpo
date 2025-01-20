@@ -48,6 +48,14 @@
             "useFrameworks": "static"
           }
         }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "organization": "ss-detailing",
+          "project": "SS Detailing",
+          "url": "https://sentry.io/"
+        }
       ]
     ],
     "experiments": {
