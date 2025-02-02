@@ -18,27 +18,27 @@ const navigationIntegration = Sentry.reactNavigationIntegration({
   enableTimeToInitialDisplay: !isRunningInExpoGo(),
 });
 
-Sentry.init({
-  dsn: "https://499237d44d9f9bd4a83ea3a4170b4c89@o4508673943011328.ingest.us.sentry.io/4508673945042944",
-  attachScreenshot: true,
-  tracesSampleRate: 1.0,
-  _experiments: {
-    profileSampleRate: 1.0,
-    replaysSessionSampleRate: 1.0, //CHANGE IN PROD
-    replaysOnErrorSampleRate: 1.0,
-  },
-  integrations: [
-    Sentry.mobileReplayIntegration({
-      maskAllImages: false,
-      maskAllText: false,
-      maskAllVectors: false,
-    }),
-    navigationIntegration,
-    Sentry.spotlightIntegration(),
-  ],
-  // uncomment the line below to enable Spotlight (https://spotlightjs.com)
-  // spotlight: __DEV__,
-});
+// Sentry.init({
+//   dsn: "https://499237d44d9f9bd4a83ea3a4170b4c89@o4508673943011328.ingest.us.sentry.io/4508673945042944",
+//   attachScreenshot: true,
+//   tracesSampleRate: 1.0,
+//   _experiments: {
+//     profileSampleRate: 1.0,
+//     replaysSessionSampleRate: 1.0, //CHANGE IN PROD
+//     replaysOnErrorSampleRate: 1.0,
+//   },
+//   integrations: [
+//     Sentry.mobileReplayIntegration({
+//       maskAllImages: false,
+//       maskAllText: false,
+//       maskAllVectors: false,
+//     }),
+//     navigationIntegration,
+//     Sentry.spotlightIntegration(),
+//   ],
+//   // uncomment the line below to enable Spotlight (https://spotlightjs.com)
+//   // spotlight: __DEV__,
+// });
 
 const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!;
 
@@ -104,4 +104,5 @@ const RootLayout = () => {
   );
 };
 
-export default Sentry.wrap(RootLayout);
+export default RootLayout;
+//export default Sentry.wrap(RootLayout);
