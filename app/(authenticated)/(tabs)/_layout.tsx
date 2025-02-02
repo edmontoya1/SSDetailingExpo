@@ -13,6 +13,15 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="service"
+        options={{
+          title: "Services",
+          tabBarIcon: ({ focused }) => ({
+            sfSymbol: focused ? "wrench.fill" : "wrench",
+          }),
+        }}
+      />
+      <Tabs.Screen
         name="appointment"
         options={{
           title: "Appointment",
